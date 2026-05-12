@@ -1,0 +1,51 @@
+// ISSUE BOOK
+void issueBook()
+{
+    int id;
+
+    bool found = false;
+
+    cout << "\nEnter Book ID : ";
+
+    cin >> id;
+
+    for (int i = 0; i < totalBooks; i++)
+    {
+        if (books[i].getBookID() == id)
+        {
+            if (!books[i].isIssued())
+            {
+                char memberName[50];
+
+                int memID;
+
+                cin.ignore();
+
+                cout << "Enter Member Name : ";
+
+                cin.getline(memberName, 50);
+
+                cout << "Enter Member ID   : ";
+
+                cin >> memID;
+
+                books[i].issueBook(memberName, memID);
+
+                cout << "\nBook Issued Successfully!\n";
+            }
+            else
+            {
+                cout << "\nBook Already Issued!\n";
+            }
+
+            found = true;
+
+            break;
+        }
+    }
+
+    if (!found)
+    {
+        cout << "\nBook Not Found!\n";
+    }
+}

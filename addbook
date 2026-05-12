@@ -1,0 +1,9 @@
+// ADD BOOK
+void addNewBook()
+{
+    books[totalBooks].addBook();
+
+    totalBooks++;
+
+    cout << "\nBook Added Successfully!\n";
+}

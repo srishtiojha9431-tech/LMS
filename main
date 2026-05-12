@@ -1,0 +1,67 @@
+// MAIN FUNCTION
+int main()
+{
+    int choice;
+
+    do
+    {
+        cout << "\n========== LIBRARY MANAGEMENT SYSTEM ==========\n";
+
+        cout << "1. Add Book\n";
+
+        cout << "2. Display All Books\n";
+
+        cout << "3. Search Book By Title\n";
+
+        cout << "4. Search Book By Author\n";
+
+        cout << "5. Issue Book\n";
+
+        cout << "6. Return Book\n";
+
+        cout << "7. Exit\n";
+
+        cout << "===============================================\n";
+
+        cout << "Enter Your Choice : ";
+
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            addNewBook();
+            break;
+
+        case 2:
+            displayAllBooks();
+            break;
+
+        case 3:
+            searchByTitle();
+            break;
+
+        case 4:
+            searchByAuthor();
+            break;
+
+        case 5:
+            issueBook();
+            break;
+
+        case 6:
+            returnBook();
+            break;
+
+        case 7:
+            cout << "\nThank You For Using Library Management System!\n";
+            break;
+
+        default:
+            cout << "\nInvalid Choice! Please Try Again.\n";
+        }
+
+    } while (choice != 7);
+
+    return 0;
+}

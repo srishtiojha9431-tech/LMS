@@ -1,0 +1,16 @@
+// DISPLAY ALL BOOKS
+void displayAllBooks()
+{
+    if (totalBooks == 0)
+    {
+        cout << "\nNo Books Available!\n";
+        return;
+    }
+
+    cout << "\n========== BOOK DETAILS ==========\n";
+
+    for (int i = 0; i < totalBooks; i++)
+    {
+        books[i].displayBook();
+    }
+}

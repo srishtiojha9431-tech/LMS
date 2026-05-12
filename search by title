@@ -1,0 +1,31 @@
+// SEARCH BY TITLE
+void searchByTitle()
+{
+    char searchTitle[50];
+
+    bool found = false;
+
+    cin.ignore();
+
+    cout << "\nEnter Book Title : ";
+
+    cin.getline(searchTitle, 50);
+
+    for (int i = 0; i < totalBooks; i++)
+    {
+        if (strcmp(books[i].getTitle(), searchTitle) == 0)
+        {
+            cout << "\nBook Found!\n";
+
+            books[i].displayBook();
+
+            found = true;
+        }
+    }
+
+    if (!found)
+    {
+        cout << "\nBook Not Found!\n";
+    }
+}
+

@@ -1,0 +1,30 @@
+// SEARCH BY AUTHOR
+void searchByAuthor()
+{
+    char searchAuthor[50];
+
+    bool found = false;
+
+    cin.ignore();
+
+    cout << "\nEnter Author Name : ";
+
+    cin.getline(searchAuthor, 50);
+
+    for (int i = 0; i < totalBooks; i++)
+    {
+        if (strcmp(books[i].getAuthor(), searchAuthor) == 0)
+        {
+            cout << "\nBook Found!\n";
+
+            books[i].displayBook();
+
+            found = true;
+        }
+    }
+
+    if (!found)
+    {
+        cout << "\nNo Books Found By This Author!\n";
+    }
+}
